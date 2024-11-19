@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;  
+const PORT = 3000||process.env.PORT ;  
 
 
 app.use(express.json());
@@ -21,7 +21,7 @@ app.get("/", (req, res)=>{
     message: "Server Running Successfully"
   })
 })
-
+dotenv.config();
 dbConnect();
 
 app.listen(PORT, () => {
