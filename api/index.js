@@ -16,7 +16,10 @@ app.use(express.json());
 
 app.use("/api/v1", router);
 app.get("/", (req, res)=>{
-  res.send("Hello");
+  res.json({
+    success:true,
+    message:"HIII"
+  });
 })
 dotenv.config();
 dbConnect();
